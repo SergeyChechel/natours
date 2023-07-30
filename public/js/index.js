@@ -3,6 +3,7 @@ import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { updateSettings } from './updateSettings';
 import { bookTour } from './stripe';
+import { showAlert } from './alerts';
 
 // DOM Elements
 const mapBox = document.getElementById('map');
@@ -68,3 +69,6 @@ if (loginForm) {
 if (logOutBtn) {
   logOutBtn.addEventListener('click', logout);
 }
+
+const alertMessage = documet.querySelector('body').dataset.alert;
+if (alertMessage) showAlert('success', alertMessage, 20);
