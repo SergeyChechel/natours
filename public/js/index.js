@@ -70,5 +70,5 @@ if (logOutBtn) {
   logOutBtn.addEventListener('click', logout);
 }
 
-const alertMessage = documet.querySelector('body').dataset.alert;
+const alertMessage = document.querySelector('body').dataset.alert;
 if (alertMessage) showAlert('success', alertMessage, 20);
